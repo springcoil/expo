@@ -9,9 +9,10 @@
     "build": "expo-module build",
     "clean": "expo-module clean",
     "test": "expo-module test",
-    "prepare": "expo-module prepare",
+    "prepare": "npm run snyk-protect && expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
-    "expo-module": "expo-module"
+    "expo-module": "expo-module",
+    "snyk-protect": "snyk protect"
   },
   "keywords": [
     "react-native",
@@ -42,6 +43,8 @@
   "gitHead": "211a7a3ce4007e7aa10ccf6efac4b5333ec31d0a",
   "dependencies": {
     "lodash": "^4.6.0",
-    "query-string": "^6.2.0"
-  }
+    "query-string": "^6.2.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
